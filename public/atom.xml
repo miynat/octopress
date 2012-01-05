@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[My Octopress Blog]]></title>
+  <link href="http://yoursite.com/atom.xml" rel="self"/>
+  <link href="http://yoursite.com/"/>
+  <updated>2012-01-05T23:59:05+02:00</updated>
+  <id>http://yoursite.com/</id>
+  <author>
+    <name><![CDATA[Your Name]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Konsoldan mail gönderimi]]></title>
+    <link href="http://yoursite.com/blog/2011/06/06/konsoldan-mail-gonderimi/"/>
+    <updated>2011-06-06T00:00:00+03:00</updated>
+    <id>http://yoursite.com/blog/2011/06/06/konsoldan-mail-gonderimi</id>
+    <content type="html"><![CDATA[<p>Konsoldan mail göndermek için <strong>mutt</strong>’ı kullanabiliriz.</p>
+
+<p><a href="http://mutt.blackfish.org.uk/" title="Mutt"><em>Mutt</em></a>, metin-tabanlı bir mail istemcisidir.</p>
+
+<p><code>yum -y install mutt</code></p>
+
+<p>ile kurulumu yapıp</p>
+
+<p><code>echo "Mail içeriği " | mutt -a eklenti.gz -s "Konu" -- selcukmiynat@gmail.com</code></p>
+
+<p>komutuyla mail gönderebiliriz.</p>
+
+<p>Komutu kısaca incelersek:</p>
+
+<p><strong>echo “Mail içeriği“</strong> : Bu komutla mail’in içeriğini veriyoruz.<br/>
+<strong>-a</strong> : Eklenti(attachment) göndermek için bu parametreyi kullanıyoruz.<br/>
+<strong>-s</strong> : Mail&#8217;in konusunu belirtmek için kullanılan parametre</p>
+
+<p>Alıcı mail adresinden önce &#8211; (çift tire) kullanmazsak şöyle bir hata alabiliriz, buna da dikkat etmek gerek:<br/>
+<em>Can&#8217;t stat selcukmiynat@gmail.com: No such file or directory</em><br/>
+<em>selcukmiynat@gmail.com: unable to attach file.</em></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[RHEL 5.2 üzerinde mod_security kurulumu]]></title>
+    <link href="http://yoursite.com/blog/2011/04/21/mod-security-kurulumu/"/>
+    <updated>2011-04-21T00:00:00+03:00</updated>
+    <id>http://yoursite.com/blog/2011/04/21/mod-security-kurulumu</id>
+    <content type="html"><![CDATA[<p>Öncelikle şu paketleri kurmamız gerekiyor:</p>
+
+<ul>
+<li>pcre-devel</li>
+<li>apr-devel</li>
+<li>apr-util-devel</li>
+</ul>
+
+
+<p><code>sudo yum install pcre-devel apr-devel apr-util-devel</code></p>
+
+<p>Başlangıç için OWASP tarafından hazırlanan kural setlerini kullanacağız:</p>
+
+<p><a href="http://sourceforge.net/projects/mod-security/files/modsecurity-crs">http://sourceforge.net/projects/mod-security/files/modsecurity-crs</a></p>
+
+<p>adresinden en son sürümü indirip, bu dosyayı</p>
+
+<p><em>/usr/local/apache2/conf/extra/modsecurity.d</em> dizini altına açarız.</p>
+
+<p><em>modsecurity_crs_10_config.conf.example</em> dosyasını
+<em>modsecurity_crs_10_config.conf</em> adıyla kaydedip</p>
+
+<p><code>SecRuleEngine On</code></p>
+
+<p>satırını ekleriz.</p>
+
+<p>Şimdi, Apache&#8217;yi durduralım:</p>
+
+<p><em>/usr/local/apache2/bin/httpd -k stop</em></p>
+
+<p>Apache üzerinde <em>mod_unique_id</em> modülü kurulu olmalı.
+Bu modülü kurmak için <a href="http://httpd.apache.org/docs/current/programs/apxs.html" title="apxs">apxs</a>&#8216;i kullanabiliriz:</p>
+
+<p><code>sudo /usr/local/apache2/bin/apxs -i -a -c /usr/local/src/httpd-2.2.17/modules/metadata/mod_unique_id.c</code></p>
+
+<p>Artık mod_security&#8217;yi derleyebiliriz:</p>
+
+<pre><code>tar zxvf modsecurity-apache_2.5.13.tar.gz
+cd modsecurity-apache_2.5.13  
+cd apache2  
+./configure  
+make  
+sudo make install  
+</code></pre>
+
+<p><em>/usr/local/apache2/conf/httpd.conf</em> içerisine şu satırları ekleriz:</p>
+
+<pre><code>LoadFile /usr/lib/libxml2.so  
+LoadModule security2_module modules/mod_security2.so  
+Include conf/extra/modsecurity.d/modsecurity_crs_10_config.conf  
+</code></pre>
+
+<p>Kurulumu tamamlamış olduk, Apache&#8217;yi tekrar çalıştırabiliriz:</p>
+
+<p><em>/usr/local/apache2/bin/httpd -k start</em></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[ilk]]></title>
+    <link href="http://yoursite.com/blog/2010/12/23/deneme/"/>
+    <updated>2010-12-23T00:00:00+02:00</updated>
+    <id>http://yoursite.com/blog/2010/12/23/deneme</id>
+    <content type="html"><![CDATA[<h1>İlk yazımız bu olsun. Jekyll&#8217;la tanışmış olalım.</h1>
+
+<h2>Bu da başka bir satır olsun ki, kalabalık görünsün.</h2>
+
+<p>Haydi bakalım.</p>
+]]></content>
+  </entry>
+  
+</feed>

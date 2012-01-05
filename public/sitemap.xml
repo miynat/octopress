@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
+    <url>
+        <loc>http://yoursite.com/blog/2010/12/23/deneme/</loc>
+        <lastmod>2012-01-05T23:58:31+02:00</lastmod>
+    </url>
+    <url>
+        <loc>http://yoursite.com/blog/2011/04/21/mod-security-kurulumu/</loc>
+        <lastmod>2012-01-05T23:58:31+02:00</lastmod>
+    </url>
+    <url>
+        <loc>http://yoursite.com/blog/2011/06/06/konsoldan-mail-gonderimi/</loc>
+        <lastmod>2012-01-05T23:58:31+02:00</lastmod>
+    </url>
+    <url>
+        <loc>http://yoursite.com/</loc>
+        <lastmod>2012-01-05T23:58:31+02:00</lastmod>
+    </url>
+    <url>
+        <loc>http://yoursite.com/blog/archives/</loc>
+        <lastmod>2012-01-05T23:58:31+02:00</lastmod>
+    </url>
+</urlset>

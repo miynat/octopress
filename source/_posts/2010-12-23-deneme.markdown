@@ -1,0 +1,10 @@
+---
+layout: post
+title: ilk
+---
+
+# İlk yazımız bu olsun. Jekyll'la tanışmış olalım.
+
+## Bu da başka bir satır olsun ki, kalabalık görünsün.
+
+Haydi bakalım.

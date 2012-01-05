@@ -1,0 +1,320 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>My Octopress Blog</title>
+  <meta name="author" content="Your Name">
+
+  
+  <meta name="description" content="Konsoldan mail göndermek için mutt’ı kullanabiliriz. Mutt, metin-tabanlı bir mail istemcisidir. yum -y install mutt ile kurulumu yapıp echo "Mail &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://yoursite.com">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="My Octopress Blog" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">My Octopress Blog</a></h1>
+  
+    <h2>A blogging framework for hackers.</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:yoursite.com" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div class="blog-index">
+  
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2011/06/06/konsoldan-mail-gonderimi/">Konsoldan Mail Gönderimi</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-06-06T00:00:00+03:00" pubdate data-updated="true">Jun 6<span>th</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Konsoldan mail göndermek için <strong>mutt</strong>’ı kullanabiliriz.</p>
+
+<p><a href="http://mutt.blackfish.org.uk/" title="Mutt"><em>Mutt</em></a>, metin-tabanlı bir mail istemcisidir.</p>
+
+<p><code>yum -y install mutt</code></p>
+
+<p>ile kurulumu yapıp</p>
+
+<p><code>echo "Mail içeriği " | mutt -a eklenti.gz -s "Konu" -- selcukmiynat@gmail.com</code></p>
+
+<p>komutuyla mail gönderebiliriz.</p>
+
+<p>Komutu kısaca incelersek:</p>
+
+<p><strong>echo “Mail içeriği“</strong> : Bu komutla mail’in içeriğini veriyoruz.<br/>
+<strong>-a</strong> : Eklenti(attachment) göndermek için bu parametreyi kullanıyoruz.<br/>
+<strong>-s</strong> : Mail&#8217;in konusunu belirtmek için kullanılan parametre</p>
+
+<p>Alıcı mail adresinden önce &#8211; (çift tire) kullanmazsak şöyle bir hata alabiliriz, buna da dikkat etmek gerek:<br/>
+<em>Can&#8217;t stat selcukmiynat@gmail.com: No such file or directory</em><br/>
+<em>selcukmiynat@gmail.com: unable to attach file.</em></p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2011/04/21/mod-security-kurulumu/">RHEL 5.2 üzerinde Mod_security Kurulumu</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-04-21T00:00:00+03:00" pubdate data-updated="true">Apr 21<span>st</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Öncelikle şu paketleri kurmamız gerekiyor:</p>
+
+<ul>
+<li>pcre-devel</li>
+<li>apr-devel</li>
+<li>apr-util-devel</li>
+</ul>
+
+
+<p><code>sudo yum install pcre-devel apr-devel apr-util-devel</code></p>
+
+<p>Başlangıç için OWASP tarafından hazırlanan kural setlerini kullanacağız:</p>
+
+<p><a href="http://sourceforge.net/projects/mod-security/files/modsecurity-crs">http://sourceforge.net/projects/mod-security/files/modsecurity-crs</a></p>
+
+<p>adresinden en son sürümü indirip, bu dosyayı</p>
+
+<p><em>/usr/local/apache2/conf/extra/modsecurity.d</em> dizini altına açarız.</p>
+
+<p><em>modsecurity_crs_10_config.conf.example</em> dosyasını
+<em>modsecurity_crs_10_config.conf</em> adıyla kaydedip</p>
+
+<p><code>SecRuleEngine On</code></p>
+
+<p>satırını ekleriz.</p>
+
+<p>Şimdi, Apache&#8217;yi durduralım:</p>
+
+<p><em>/usr/local/apache2/bin/httpd -k stop</em></p>
+
+<p>Apache üzerinde <em>mod_unique_id</em> modülü kurulu olmalı.
+Bu modülü kurmak için <a href="http://httpd.apache.org/docs/current/programs/apxs.html" title="apxs">apxs</a>&#8216;i kullanabiliriz:</p>
+
+<p><code>sudo /usr/local/apache2/bin/apxs -i -a -c /usr/local/src/httpd-2.2.17/modules/metadata/mod_unique_id.c</code></p>
+
+<p>Artık mod_security&#8217;yi derleyebiliriz:</p>
+
+<pre><code>tar zxvf modsecurity-apache_2.5.13.tar.gz
+cd modsecurity-apache_2.5.13  
+cd apache2  
+./configure  
+make  
+sudo make install  
+</code></pre>
+
+<p><em>/usr/local/apache2/conf/httpd.conf</em> içerisine şu satırları ekleriz:</p>
+
+<pre><code>LoadFile /usr/lib/libxml2.so  
+LoadModule security2_module modules/mod_security2.so  
+Include conf/extra/modsecurity.d/modsecurity_crs_10_config.conf  
+</code></pre>
+
+<p>Kurulumu tamamlamış olduk, Apache&#8217;yi tekrar çalıştırabiliriz:</p>
+
+<p><em>/usr/local/apache2/bin/httpd -k start</em></p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2010/12/23/deneme/">Ilk</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-12-23T00:00:00+02:00" pubdate data-updated="true">Dec 23<span>rd</span>, 2010</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><h1>İlk yazımız bu olsun. Jekyll&#8217;la tanışmış olalım.</h1>
+
+<h2>Bu da başka bir satır olsun ki, kalabalık görünsün.</h2>
+
+<p>Haydi bakalım.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  <div class="pagination">
+    
+    <a href="/blog/archives">Blog Archives</a>
+    
+  </div>
+</div>
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2011/06/06/konsoldan-mail-gonderimi/">Konsoldan mail gönderimi</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2011/04/21/mod-security-kurulumu/">RHEL 5.2 üzerinde mod_security kurulumu</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2010/12/23/deneme/">ilk</a>
+      </li>
+    
+  </ul>
+</section>
+
+
+
+
+
+
+  
+</aside>
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2012 - Your Name -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>
