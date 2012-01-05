@@ -5,8 +5,8 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>ilk - My Octopress Blog</title>
-  <meta name="author" content="Your Name">
+  <title>ilk - Fung-Hu</title>
+  <meta name="author" content="Selçuk Mıynat">
 
   
   <meta name="description" content="İlk yazımız bu olsun. Jekyll&#8217;la tanışmış olalım. Bu da başka bir satır olsun ki, kalabalık görünsün. Haydi bakalım.
@@ -19,13 +19,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://yoursite.com/blog/2010/12/23/deneme">
+  <link rel="canonical" href="http://selcuk.miynat.com/blog/2010/12/23/deneme">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
   <script src="/javascripts/ender.js"></script>
   <script src="/javascripts/octopress.js" type="text/javascript"></script>
-  <link href="/atom.xml" rel="alternate" title="My Octopress Blog" type="application/atom+xml">
+  <link href="http://feeds.feedburner.com/Fung-Hu" rel="alternate" title="Fung-Hu" type="application/atom+xml">
   <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
 <link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
 <link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
@@ -36,21 +36,21 @@
 
 <body   >
   <header role="banner"><hgroup>
-  <h1><a href="/">My Octopress Blog</a></h1>
+  <h1><a href="/">Fung-Hu</a></h1>
   
-    <h2>A blogging framework for hackers.</h2>
+    <h2>Debug mode: On</h2>
   
 </hgroup>
 
 </header>
   <nav role="navigation"><ul class="subscription" data-subscription="rss">
-  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  <li><a href="http://feeds.feedburner.com/Fung-Hu" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
   
 </ul>
   
 <form action="http://google.com/search" method="get">
   <fieldset role="search">
-    <input type="hidden" name="q" value="site:yoursite.com" />
+    <input type="hidden" name="q" value="site:selcuk.miynat.com" />
     <input class="search" type="text" name="q" results="0" placeholder="Search"/>
   </fieldset>
 </form>
@@ -84,7 +84,7 @@
   
 
 
-<time datetime="2010-12-23T00:00:00+02:00" pubdate data-updated="true">Dec 23<span>rd</span>, 2010</time>
+<time datetime="2010-12-23T00:00:00+02:00" pubdate data-updated="true">23 December 2010</time>
         
       </p>
     
@@ -104,7 +104,7 @@
       
   
 
-<span class="byline author vcard">Posted by <span class="fn">Your Name</span></span>
+<span class="byline author vcard">Posted by <span class="fn">Selçuk Mıynat</span></span>
 
       
 
@@ -118,7 +118,7 @@
   
 
 
-<time datetime="2010-12-23T00:00:00+02:00" pubdate data-updated="true">Dec 23<span>rd</span>, 2010</time>
+<time datetime="2010-12-23T00:00:00+02:00" pubdate data-updated="true">23 December 2010</time>
       
 
 
@@ -126,9 +126,13 @@
     
       <div class="sharing">
   
-  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://yoursite.com/blog/2010/12/23/deneme/" data-via="" data-counturl="http://yoursite.com/blog/2010/12/23/deneme/" >Tweet</a>
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://selcuk.miynat.com/blog/2010/12/23/deneme/" data-via="miynat" data-counturl="http://selcuk.miynat.com/blog/2010/12/23/deneme/" >Tweet</a>
   
   
+  <div class="g-plusone" data-size="medium"></div>
+  
+  
+    <div class="fb-like" data-send="true" data-width="450" data-show-faces="false"></div>
   
 </div>
 
@@ -166,6 +170,22 @@
 </section>
 
 
+<section>
+  <h1>Latest Tweets</h1>
+  <ul id="tweets">
+    <li class="loading">Status updating...</li>
+  </ul>
+  <script type="text/javascript">
+    $.domReady(function(){
+      getTwitterFeed("miynat", 4, false);
+    });
+  </script>
+  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
+  
+    <a href="http://twitter.com/miynat" class="twitter-follow-button" data-show-count="false">Follow @miynat</a>
+  
+</section>
+
 
 
 
@@ -177,7 +197,7 @@
     </div>
   </div>
   <footer role="contentinfo"><p>
-  Copyright &copy; 2012 - Your Name -
+  Copyright &copy; 2012 - Selçuk Mıynat -
   <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
 </p>
 
@@ -186,7 +206,24 @@
 
 
 
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#appId=212934732101925&xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
 
+
+
+  <script type="text/javascript">
+    (function() {
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+    })();
+  </script>
 
 
 
