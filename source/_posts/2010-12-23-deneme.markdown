@@ -1,10 +1,9 @@
 ---
 layout: post
-title: ilk
+title: Hello World
 ---
 
-# İlk yazımız bu olsun. Jekyll'la tanışmış olalım.
+İlk yazımız bu olsun. Blog dünyasıyla tanışmış olalım.
 
-## Bu da başka bir satır olsun ki, kalabalık görünsün.
 
 Haydi bakalım.

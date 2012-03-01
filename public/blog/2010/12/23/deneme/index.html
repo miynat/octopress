@@ -5,11 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>ilk - Fung-Hu</title>
+  <title>Hello World - Fung-Hu</title>
   <meta name="author" content="Selçuk Mıynat">
 
   
-  <meta name="description" content="İlk yazımız bu olsun. Jekyll&#8217;la tanışmış olalım. Bu da başka bir satır olsun ki, kalabalık görünsün. Haydi bakalım.
+  <meta name="description" content="İlk yazımız bu olsun. Blog dünyasıyla tanışmış olalım. Haydi bakalım.
 ">
   
 
@@ -31,6 +31,18 @@
 <link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
 
   
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-28274299-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
 
 </head>
 
@@ -58,6 +70,7 @@
 <ul class="main-navigation">
   <li><a href="/">Blog</a></li>
   <li><a href="/blog/archives">Archives</a></li>
+  <li><a href="/blog/about">About</a></li>
 </ul>
 
 </nav>
@@ -68,7 +81,7 @@
   
   <header>
     
-      <h1 class="entry-title">Ilk</h1>
+      <h1 class="entry-title">Hello World</h1>
     
     
       <p class="meta">
@@ -91,9 +104,7 @@
   </header>
 
 
-<div class="entry-content"><h1>İlk yazımız bu olsun. Jekyll&#8217;la tanışmış olalım.</h1>
-
-<h2>Bu da başka bir satır olsun ki, kalabalık görünsün.</h2>
+<div class="entry-content"><p>İlk yazımız bu olsun. Blog dünyasıyla tanışmış olalım.</p>
 
 <p>Haydi bakalım.</p>
 </div>
@@ -163,10 +174,39 @@
       </li>
     
       <li class="post">
-        <a href="/blog/2010/12/23/deneme/">ilk</a>
+        <a href="/blog/2010/12/23/deneme/">Hello World</a>
       </li>
     
   </ul>
+</section>
+
+<section>
+  <h1>Github Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+  <a href="https://github.com/miynat">@miynat</a> on Github
+  
+  <script type="text/javascript">
+    $.domReady(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'miynat',
+            count: 0,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
 </section>
 
 
@@ -177,7 +217,7 @@
   </ul>
   <script type="text/javascript">
     $.domReady(function(){
-      getTwitterFeed("miynat", 4, false);
+      getTwitterFeed("miynat", 0, false);
     });
   </script>
   <script src="/javascripts/twitter.js" type="text/javascript"> </script>

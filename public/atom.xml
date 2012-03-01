@@ -4,7 +4,7 @@
   <title><![CDATA[Fung-Hu]]></title>
   <link href="http://selcuk.miynat.com/atom.xml" rel="self"/>
   <link href="http://selcuk.miynat.com/"/>
-  <updated>2012-01-06T00:07:31+02:00</updated>
+  <updated>2012-03-01T23:29:58+02:00</updated>
   <id>http://selcuk.miynat.com/</id>
   <author>
     <name><![CDATA[Selçuk Mıynat]]></name>
@@ -106,13 +106,11 @@ Include conf/extra/modsecurity.d/modsecurity_crs_10_config.conf
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[ilk]]></title>
+    <title type="html"><![CDATA[Hello World]]></title>
     <link href="http://selcuk.miynat.com/blog/2010/12/23/deneme/"/>
     <updated>2010-12-23T00:00:00+02:00</updated>
     <id>http://selcuk.miynat.com/blog/2010/12/23/deneme</id>
-    <content type="html"><![CDATA[<h1>İlk yazımız bu olsun. Jekyll&#8217;la tanışmış olalım.</h1>
-
-<h2>Bu da başka bir satır olsun ki, kalabalık görünsün.</h2>
+    <content type="html"><![CDATA[<p>İlk yazımız bu olsun. Blog dünyasıyla tanışmış olalım.</p>
 
 <p>Haydi bakalım.</p>
 ]]></content>
