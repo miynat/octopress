@@ -1,9 +1,0 @@
----
-layout: post
-title: Hello World
----
-
-İlk yazımız bu olsun. Blog dünyasıyla tanışmış olalım.
-
-
-Haydi bakalım.
