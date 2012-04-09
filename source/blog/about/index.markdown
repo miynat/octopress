@@ -1,12 +1,18 @@
 ---
 layout: page
-title: Hakkımda
 ---
 
-### Selçuk Mıynat
+## Selçuk Mıynat
 
-İletişim adresim: **selcukmiynat@gmail.com**
+[![E-mail](/images/email-24x24.png)](mailto:selcukmiynat@gmail.com)
+[![Twitter](/images/twitter-24x24.png)](http://www.twitter.com/miynat/)
+[![Linkedin](/images/linkedin-24x24.png)](http://tr.linkedin.com/in/selcukmiynat/)
+[![Google Plus](/images/google+-24x24.png)](https://plus.google.com/103044866822904094845)
+[![Stackoverflow](/images/stackoverflow-24x24.png)](http://stackoverflow.com/users/1167080/selcuk-miynat)
+[![Atom](/images/feed-24x24.png)](http://feeds.feedburner.com/Fung-Hu)
 
-Ayrıca, beni şuralarda da bulabilirsiniz:
+##### Site hakkında:
 
-[Twitter](http://www.twitter.com/miynat/ "Twitter")&nbsp;&nbsp;&nbsp;&nbsp;[Linkedin](http://tr.linkedin.com/in/selcukmiynat/ "LinkedIn")
+[Octopress](http://octopress.org/ "Octopress") ile oluşturduğum statik sayfaları [Hetzner](http://www.hetzner.de/en/ "Hetzner")'den kiraladığım [VPS](http://en.wikipedia.org/wiki/Virtual_private_server "Virtual Private Server") üzerinde, [Debian](http://www.debian.org/ "Evrensel İşletim Sistemi") - [nginx](http://nginx.org/ "nginx") ikilisini kullanarak yayınlıyorum.
+
+
