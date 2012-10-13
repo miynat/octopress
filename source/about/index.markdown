@@ -15,7 +15,4 @@ sharing: false
 ##### Site hakkında:
 
 [Octopress](http://octopress.org/ "Octopress") ile oluşturduğum statik sayfaları [Hetzner](http://www.hetzner.de/en/ "Hetzner")'den kiraladığım [VPS](http://en.wikipedia.org/wiki/Virtual_private_server "Virtual Private Server") üzerinde, [Debian](http://www.debian.org/ "Evrensel İşletim Sistemi") - [nginx](http://nginx.org/ "nginx") ikilisini kullanarak yayınlıyorum.
-
-------   
-
-İkonlar [Paul Robert Lloyd](http://paulrobertlloyd.com/2009/06/social_media_icons) tarafından hazırlanmıştır.
+[Alessandro Melandri](http://melandri.net/about/)'nin hazırladığı [Darkstripes](https://github.com/amelandri/darkstripes) temasını kullanıyorum. İkonlar ise [Paul Robert Lloyd](http://paulrobertlloyd.com/2009/06/social_media_icons) tarafından hazırlanmıştır.
