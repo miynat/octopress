@@ -27,6 +27,7 @@ echo "Mail &hellip;">
   <script src="/javascripts/ender.js"></script>
   <script src="/javascripts/octopress.js" type="text/javascript"></script>
   <link href="http://feeds.feedburner.com/Fung-Hu" rel="alternate" title="Fung-Hu" type="application/atom+xml">
+  <link href='http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
   <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
 <link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
 <link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
@@ -49,10 +50,17 @@ echo "Mail &hellip;">
 
 <body   >
   <header role="banner"><hgroup>
+  <div id="logo">
+  	<div id="logoLeft">{</div>
+  	<div id="logoText">sm</div>
+  	<div id="logoRight">}</div>
+  	<div class="clear"></div>
+  </div>
   <h1><a href="/">Fung-Hu</a></h1>
   
     <h2>Debug mode: On</h2>
   
+  <div class="clear"></div>
 </hgroup>
 
 </header>
@@ -85,7 +93,9 @@ echo "Mail &hellip;">
       
   <header>
     
-      <h1 class="entry-title"><a href="/konsoldan-mail-gonderimi">Konsoldan Mail Gönderimi</a></h1>
+      <!-- Now we're back to normal posts. Note the links used under href in both headers.-->
+        <h1 class="entry-title"><a href="/konsoldan-mail-gonderimi">Konsoldan Mail Gönderimi</a></h1>
+      
     
     
       <p class="meta">
@@ -147,7 +157,9 @@ echo "Mail &hellip;">
       
   <header>
     
-      <h1 class="entry-title"><a href="/mod-security-kurulumu">RHEL 5.2 üzerinde Mod_security Kurulumu</a></h1>
+      <!-- Now we're back to normal posts. Note the links used under href in both headers.-->
+        <h1 class="entry-title"><a href="/mod-security-kurulumu">RHEL 5.2 üzerinde Mod_security Kurulumu</a></h1>
+      
     
     
       <p class="meta">
@@ -191,7 +203,7 @@ echo "Mail &hellip;">
 
 <p>adresinden en son sürümü indirip, bu dosyayı</p>
 
-<p><em>/usr/local/apache2/conf/extra/modsecurity.d</em> dizini altına açarız.</p>
+<p><code>/usr/local/apache2/conf/extra/modsecurity.d</code> dizini altına açarız.</p>
 
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 </pre></td><td class='code'><pre><code class=''><span class='line'>cp modsecurity_crs_10_config.conf.example modsecurity_crs_10_config.conf</span></code></pre></td></tr></table></div></figure>
@@ -228,7 +240,7 @@ Bu modülü kurmak için <a href="http://httpd.apache.org/docs/current/programs/
 </span><span class='line'>sudo make install  </span></code></pre></td></tr></table></div></figure>
 
 
-<p><em>/usr/local/apache2/conf/httpd.conf</em> içerisine şu satırları ekleriz:</p>
+<p><code>/usr/local/apache2/conf/httpd.conf</code> içerisine şu satırları ekleriz:</p>
 
 <pre><code>LoadFile /usr/lib/libxml2.so  
 LoadModule security2_module modules/mod_security2.so  
@@ -252,7 +264,9 @@ Include conf/extra/modsecurity.d/modsecurity_crs_10_config.conf
       
   <header>
     
-      <h1 class="entry-title"><a href="/deneme">Hello World</a></h1>
+      <!-- Now we're back to normal posts. Note the links used under href in both headers.-->
+        <h1 class="entry-title"><a href="/deneme">Hello World</a></h1>
+      
     
     
       <p class="meta">
@@ -289,20 +303,20 @@ Include conf/extra/modsecurity.d/modsecurity_crs_10_config.conf
   
   <div class="pagination">
     
-    <a href="/archives">Blog Archives</a>
+    <a href="/blog/archives">Blog Archives</a>
     
   </div>
 </div>
 <aside class="sidebar">
   
     <section>
-  <h1>About Me</h1>
-  <p><a href="mailto:selcukmiynat@gmail.com"><img src="/images/email-16x16.png" /></a>
-  <a href="http://www.twitter.com/miynat/"><img src="/images/twitter-16x16.png" /></a>
-  <a href="http://tr.linkedin.com/in/selcukmiynat/"><img src="/images/linkedin-16x16.png" /></a>
-  <a href="https://plus.google.com/103044866822904094845"><img src="/images/google+-16x16.png" /></a>
-  <a href="http://stackoverflow.com/users/1167080/selcuk-miynat"><img src="/images/stackoverflow-16x16.png" /></a>
-  <a href="http://feeds.feedburner.com/Fung-Hu"><img src="/images/feed-16x16.png" /></a></p>
+<h1>About Me</h1>
+<p><a href="mailto:selcukmiynat@gmail.com"><img src="/images/email-16x16.png" /></a>
+<a href="http://www.twitter.com/miynat/"><img src="/images/twitter-16x16.png" /></a>
+<a href="http://tr.linkedin.com/in/selcukmiynat/"><img src="/images/linkedin-16x16.png" /></a>
+<a href="https://plus.google.com/103044866822904094845"><img src="/images/google+-16x16.png" /></a>
+<a href="http://stackoverflow.com/users/1167080/selcuk-miynat"><img src="/images/stackoverflow-16x16.png" /></a>
+<a href="http://feeds.feedburner.com/Fung-Hu"><img src="/images/feed-16x16.png" /></a></p>
 </section>
 <section>
   <h1>Recent Posts</h1>

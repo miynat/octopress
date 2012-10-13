@@ -4,7 +4,7 @@
   <title><![CDATA[Fung-Hu]]></title>
   <link href="http://selcuk.miynat.com/atom.xml" rel="self"/>
   <link href="http://selcuk.miynat.com/"/>
-  <updated>2012-10-13T21:38:58+03:00</updated>
+  <updated>2012-10-13T22:27:01+03:00</updated>
   <id>http://selcuk.miynat.com/</id>
   <author>
     <name><![CDATA[Selçuk Mıynat]]></name>
@@ -70,7 +70,7 @@
 
 <p>adresinden en son sürümü indirip, bu dosyayı</p>
 
-<p><em>/usr/local/apache2/conf/extra/modsecurity.d</em> dizini altına açarız.</p>
+<p><code>/usr/local/apache2/conf/extra/modsecurity.d</code> dizini altına açarız.</p>
 
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 </pre></td><td class='code'><pre><code class=''><span class='line'>cp modsecurity_crs_10_config.conf.example modsecurity_crs_10_config.conf</span></code></pre></td></tr></table></div></figure>
@@ -107,7 +107,7 @@ Bu modülü kurmak için <a href="http://httpd.apache.org/docs/current/programs/
 </span><span class='line'>sudo make install  </span></code></pre></td></tr></table></div></figure>
 
 
-<p><em>/usr/local/apache2/conf/httpd.conf</em> içerisine şu satırları ekleriz:</p>
+<p><code>/usr/local/apache2/conf/httpd.conf</code> içerisine şu satırları ekleriz:</p>
 
 <pre><code>LoadFile /usr/lib/libxml2.so  
 LoadModule security2_module modules/mod_security2.so  
