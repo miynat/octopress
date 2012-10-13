@@ -1,27 +1,27 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
     <url>
-        <loc>http://selcuk.miynat.com/blog/2010/12/23/deneme/</loc>
+        <loc>http://selcuk.miynat.com/deneme</loc>
         <lastmod>2012-10-13T17:35:20+03:00</lastmod>
     </url>
     <url>
-        <loc>http://selcuk.miynat.com/blog/2011/04/21/mod-security-kurulumu/</loc>
+        <loc>http://selcuk.miynat.com/mod-security-kurulumu</loc>
         <lastmod>2012-10-13T21:01:57+03:00</lastmod>
     </url>
     <url>
-        <loc>http://selcuk.miynat.com/blog/2011/06/06/konsoldan-mail-gonderimi/</loc>
+        <loc>http://selcuk.miynat.com/konsoldan-mail-gonderimi</loc>
         <lastmod>2012-10-13T21:01:59+03:00</lastmod>
     </url>
     <url>
         <loc>http://selcuk.miynat.com/</loc>
-        <lastmod>2012-10-13T21:01:59+03:00</lastmod>
+        <lastmod>2012-10-13T21:27:38+03:00</lastmod>
     </url>
     <url>
-        <loc>http://selcuk.miynat.com/blog/about/</loc>
+        <loc>http://selcuk.miynat.com/about/</loc>
         <lastmod>2012-10-13T17:35:20+03:00</lastmod>
     </url>
     <url>
-        <loc>http://selcuk.miynat.com/blog/archives/</loc>
+        <loc>http://selcuk.miynat.com/archives/</loc>
         <lastmod>2012-10-13T21:01:59+03:00</lastmod>
     </url>
 </urlset>

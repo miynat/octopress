@@ -5,13 +5,14 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Konsoldan mail gönderimi - Fung-Hu</title>
+  <title>Blog Archive - Fung-Hu</title>
   <meta name="author" content="Selçuk Mıynat">
 
   
-  <meta name="description" content="Konsoldan mail göndermek için mutt’ı kullanabiliriz. Mutt, metin-tabanlı bir mail istemcisidir. 1
-yum -y install mutt ile kurulumu yapıp 1
-echo "Mail &hellip;">
+  <meta name="description" content="Blog Archive 2011 Konsoldan mail gönderimi
+Jun 06 2011 RHEL 5.2 üzerinde mod_security kurulumu
+Apr 21 2011 2010 Hello World
+Dec 23 2010 About Me &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -20,7 +21,7 @@ echo "Mail &hellip;">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://selcuk.miynat.com/blog/2011/06/06/konsoldan-mail-gonderimi/">
+  <link rel="canonical" href="http://selcuk.miynat.com/archives/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
@@ -70,119 +71,63 @@ echo "Mail &hellip;">
   
 <ul class="main-navigation">
   <li><a href="/">Blog</a></li>
-  <li><a href="/blog/archives">Archives</a></li>
-  <li><a href="/blog/about">About</a></li>
+  <li><a href="/archives">Archives</a></li>
+  <li><a href="/about">About</a></li>
 </ul>
 
 </nav>
   <div id="main">
     <div id="content">
       <div>
-<article class="hentry" role="article">
+<article role="article">
   
   <header>
-    
-      <h1 class="entry-title">Konsoldan Mail Gönderimi</h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-06-06T00:00:00+03:00" pubdate data-updated="true">06 June 2011</time>
-        
-      </p>
+    <h1 class="entry-title">Blog Archive</h1>
     
   </header>
-
-
-<div class="entry-content"><p>Konsoldan mail göndermek için <strong>mutt</strong>’ı kullanabiliriz.</p>
-
-<p><a href="http://mutt.blackfish.org.uk/" title="Mutt"><em>Mutt</em></a>, metin-tabanlı bir mail istemcisidir.</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>yum -y install mutt</span></code></pre></td></tr></table></div></figure>
-
-
-<p>ile kurulumu yapıp</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>echo "Mail içeriği " | mutt -a eklenti.gz -s "Konu" -- selcukmiynat@gmail.com</span></code></pre></td></tr></table></div></figure>
-
-
-<p>komutuyla mail gönderebiliriz.</p>
-
-<p>Komutu kısaca incelersek:</p>
-
-<p><strong>echo “Mail içeriği“</strong> : Bu komutla mail’in içeriğini veriyoruz.<br/>
-<strong>-a</strong> : Eklenti(attachment) göndermek için bu parametreyi kullanıyoruz.<br/>
-<strong>-s</strong> : Mail&#8217;in konusunu belirtmek için kullanılan parametre</p>
-
-<p>Alıcı mail adresinden önce &#8211; (çift tire) kullanmazsak şöyle bir hata alabiliriz, buna da dikkat etmek gerek:<br/>
-<em>Can&#8217;t stat selcukmiynat@gmail.com: No such file or directory</em><br/>
-<em>selcukmiynat@gmail.com: unable to attach file.</em></p>
-</div>
-
-
-  <footer>
-    <p class="meta">
-      
   
-
-<span class="byline author vcard">Posted by <span class="fn">Selçuk Mıynat</span></span>
-
-      
-
-
-
-
-
+  <div id="blog-archives">
 
 
 
   
+  <h2>2011</h2>
+
+<article>
+  
+<h1><a href="/konsoldan-mail-gonderimi">Konsoldan mail gönderimi</a></h1>
+<time datetime="2011-06-06T00:00:00+03:00" pubdate><span class='month'>Jun</span> <span class='day'>06</span> <span class='year'>2011</span></time>
 
 
-<time datetime="2011-06-06T00:00:00+03:00" pubdate data-updated="true">06 June 2011</time>
-      
-
-
-    </p>
-    
-      <div class="sharing">
-  
-  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://selcuk.miynat.com/blog/2011/06/06/konsoldan-mail-gonderimi/" data-via="" data-counturl="http://selcuk.miynat.com/blog/2011/06/06/konsoldan-mail-gonderimi/" >Tweet</a>
-  
-  
-  <div class="g-plusone" data-size="medium"></div>
-  
-  
-</div>
-
-    
-    <p class="meta">
-      
-        <a class="basic-alignment left" href="/blog/2011/04/21/mod-security-kurulumu/" title="Previous Post: RHEL 5.2 üzerinde mod_security kurulumu">&laquo; RHEL 5.2 üzerinde mod_security kurulumu</a>
-      
-      
-    </p>
-  </footer>
 </article>
 
-  <section>
-    <h1>Comments</h1>
-    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+<article>
+  
+<h1><a href="/mod-security-kurulumu">RHEL 5.2 üzerinde mod_security kurulumu</a></h1>
+<time datetime="2011-04-21T00:00:00+03:00" pubdate><span class='month'>Apr</span> <span class='day'>21</span> <span class='year'>2011</span></time>
+
+
+</article>
+
+
+
+  
+  <h2>2010</h2>
+
+<article>
+  
+<h1><a href="/deneme">Hello World</a></h1>
+<time datetime="2010-12-23T00:00:00+02:00" pubdate><span class='month'>Dec</span> <span class='day'>23</span> <span class='year'>2010</span></time>
+
+
+</article>
+
 </div>
-  </section>
+
+  
+</article>
 
 </div>
 
@@ -202,15 +147,15 @@ echo "Mail &hellip;">
   <ul id="recent_posts">
     
       <li class="post">
-        <a href="/blog/2011/06/06/konsoldan-mail-gonderimi/">Konsoldan mail gönderimi</a>
+        <a href="/konsoldan-mail-gonderimi">Konsoldan mail gönderimi</a>
       </li>
     
       <li class="post">
-        <a href="/blog/2011/04/21/mod-security-kurulumu/">RHEL 5.2 üzerinde mod_security kurulumu</a>
+        <a href="/mod-security-kurulumu">RHEL 5.2 üzerinde mod_security kurulumu</a>
       </li>
     
       <li class="post">
-        <a href="/blog/2010/12/23/deneme/">Hello World</a>
+        <a href="/deneme">Hello World</a>
       </li>
     
   </ul>
@@ -234,10 +179,7 @@ echo "Mail &hellip;">
       var disqus_shortname = 'miynat';
       
         
-        // var disqus_developer = 1;
-        var disqus_identifier = 'http://selcuk.miynat.com/blog/2011/06/06/konsoldan-mail-gonderimi/';
-        var disqus_url = 'http://selcuk.miynat.com/blog/2011/06/06/konsoldan-mail-gonderimi/';
-        var disqus_script = 'embed.js';
+        var disqus_script = 'count.js';
       
     (function () {
       var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;

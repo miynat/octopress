@@ -5,12 +5,14 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Hello World - Fung-Hu</title>
+  <title>RHEL 5.2 üzerinde mod_security kurulumu - Fung-Hu</title>
   <meta name="author" content="Selçuk Mıynat">
 
   
-  <meta name="description" content="İlk yazımız bu olsun. Blog dünyasıyla tanışmış olalım. Haydi bakalım.
-">
+  <meta name="description" content="Öncelikle şu paketleri kurmamız gerekiyor: pcre-devel
+apr-devel
+apr-util-devel 1
+sudo yum install pcre-devel apr-devel apr-util-devel Başlangıç için &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -19,7 +21,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://selcuk.miynat.com/blog/2010/12/23/deneme/">
+  <link rel="canonical" href="http://selcuk.miynat.com/mod-security-kurulumu">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
@@ -69,8 +71,8 @@
   
 <ul class="main-navigation">
   <li><a href="/">Blog</a></li>
-  <li><a href="/blog/archives">Archives</a></li>
-  <li><a href="/blog/about">About</a></li>
+  <li><a href="/archives">Archives</a></li>
+  <li><a href="/about">About</a></li>
 </ul>
 
 </nav>
@@ -81,7 +83,7 @@
   
   <header>
     
-      <h1 class="entry-title">Hello World</h1>
+      <h1 class="entry-title">RHEL 5.2 üzerinde Mod_security Kurulumu</h1>
     
     
       <p class="meta">
@@ -97,16 +99,83 @@
   
 
 
-<time datetime="2010-12-23T00:00:00+02:00" pubdate data-updated="true">23 December 2010</time>
+<time datetime="2011-04-21T00:00:00+03:00" pubdate data-updated="true">21 April 2011</time>
+        
+         | <a href="#disqus_thread">Comments</a>
         
       </p>
     
   </header>
 
 
-<div class="entry-content"><p>İlk yazımız bu olsun. Blog dünyasıyla tanışmış olalım.</p>
+<div class="entry-content"><p>Öncelikle şu paketleri kurmamız gerekiyor:</p>
 
-<p>Haydi bakalım.</p>
+<ul>
+<li>pcre-devel</li>
+<li>apr-devel</li>
+<li>apr-util-devel</li>
+</ul>
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>sudo yum install pcre-devel apr-devel apr-util-devel</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Başlangıç için OWASP tarafından hazırlanan kural setlerini kullanacağız:</p>
+
+<p><a href="http://sourceforge.net/projects/mod-security/files/modsecurity-crs">http://sourceforge.net/projects/mod-security/files/modsecurity-crs</a></p>
+
+<p>adresinden en son sürümü indirip, bu dosyayı</p>
+
+<p><em>/usr/local/apache2/conf/extra/modsecurity.d</em> dizini altına açarız.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>cp modsecurity_crs_10_config.conf.example modsecurity_crs_10_config.conf</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Bu dosyaya <code>SecRuleEngine On</code> satırını ekleriz.</p>
+
+<p>Şimdi, Apache&#8217;yi durduralım:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>/usr/local/apache2/bin/httpd -k stop</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Apache üzerinde <em>mod_unique_id</em> modülü kurulu olmalı.
+Bu modülü kurmak için <a href="http://httpd.apache.org/docs/current/programs/apxs.html" title="apxs">apxs</a>&#8216;i kullanabiliriz:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>sudo /usr/local/apache2/bin/apxs -i -a -c /usr/local/src/httpd-2.2.17/modules/metadata/mod_unique_id.c</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Artık mod_security&#8217;yi derleyebiliriz:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>tar zxvf modsecurity-apache_2.5.13.tar.gz
+</span><span class='line'>cd modsecurity-apache_2.5.13  
+</span><span class='line'>cd apache2  
+</span><span class='line'>./configure  
+</span><span class='line'>make  
+</span><span class='line'>sudo make install  </span></code></pre></td></tr></table></div></figure>
+
+
+<p><em>/usr/local/apache2/conf/httpd.conf</em> içerisine şu satırları ekleriz:</p>
+
+<pre><code>LoadFile /usr/lib/libxml2.so  
+LoadModule security2_module modules/mod_security2.so  
+Include conf/extra/modsecurity.d/modsecurity_crs_10_config.conf  
+</code></pre>
+
+<p>Kurulumu tamamlamış olduk, Apache&#8217;yi tekrar çalıştırabiliriz:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>/usr/local/apache2/bin/httpd -k start</span></code></pre></td></tr></table></div></figure>
+
 </div>
 
 
@@ -129,7 +198,7 @@
   
 
 
-<time datetime="2010-12-23T00:00:00+02:00" pubdate data-updated="true">23 December 2010</time>
+<time datetime="2011-04-21T00:00:00+03:00" pubdate data-updated="true">21 April 2011</time>
       
 
 
@@ -137,7 +206,7 @@
     
       <div class="sharing">
   
-  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://selcuk.miynat.com/blog/2010/12/23/deneme/" data-via="" data-counturl="http://selcuk.miynat.com/blog/2010/12/23/deneme/" >Tweet</a>
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://selcuk.miynat.com/mod-security-kurulumu" data-via="" data-counturl="http://selcuk.miynat.com/mod-security-kurulumu" >Tweet</a>
   
   
   <div class="g-plusone" data-size="medium"></div>
@@ -148,8 +217,10 @@
     
     <p class="meta">
       
+        <a class="basic-alignment left" href="/deneme" title="Previous Post: Hello World">&laquo; Hello World</a>
       
-        <a class="basic-alignment right" href="/blog/2011/04/21/mod-security-kurulumu/" title="Next Post: RHEL 5.2 üzerinde mod_security kurulumu">RHEL 5.2 üzerinde mod_security kurulumu &raquo;</a>
+      
+        <a class="basic-alignment right" href="/konsoldan-mail-gonderimi" title="Next Post: Konsoldan mail gönderimi">Konsoldan mail gönderimi &raquo;</a>
       
     </p>
   </footer>
@@ -179,15 +250,15 @@
   <ul id="recent_posts">
     
       <li class="post">
-        <a href="/blog/2011/06/06/konsoldan-mail-gonderimi/">Konsoldan mail gönderimi</a>
+        <a href="/konsoldan-mail-gonderimi">Konsoldan mail gönderimi</a>
       </li>
     
       <li class="post">
-        <a href="/blog/2011/04/21/mod-security-kurulumu/">RHEL 5.2 üzerinde mod_security kurulumu</a>
+        <a href="/mod-security-kurulumu">RHEL 5.2 üzerinde mod_security kurulumu</a>
       </li>
     
       <li class="post">
-        <a href="/blog/2010/12/23/deneme/">Hello World</a>
+        <a href="/deneme">Hello World</a>
       </li>
     
   </ul>
@@ -212,8 +283,8 @@
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://selcuk.miynat.com/blog/2010/12/23/deneme/';
-        var disqus_url = 'http://selcuk.miynat.com/blog/2010/12/23/deneme/';
+        var disqus_identifier = 'http://selcuk.miynat.com/mod-security-kurulumu';
+        var disqus_url = 'http://selcuk.miynat.com/mod-security-kurulumu';
         var disqus_script = 'embed.js';
       
     (function () {

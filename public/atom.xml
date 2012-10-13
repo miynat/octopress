@@ -4,7 +4,7 @@
   <title><![CDATA[Fung-Hu]]></title>
   <link href="http://selcuk.miynat.com/atom.xml" rel="self"/>
   <link href="http://selcuk.miynat.com/"/>
-  <updated>2012-10-13T21:01:59+03:00</updated>
+  <updated>2012-10-13T21:38:58+03:00</updated>
   <id>http://selcuk.miynat.com/</id>
   <author>
     <name><![CDATA[Selçuk Mıynat]]></name>
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Konsoldan mail gönderimi]]></title>
-    <link href="http://selcuk.miynat.com/blog/2011/06/06/konsoldan-mail-gonderimi/"/>
+    <link href="http://selcuk.miynat.com/konsoldan-mail-gonderimi"/>
     <updated>2011-06-06T00:00:00+03:00</updated>
-    <id>http://selcuk.miynat.com/blog/2011/06/06/konsoldan-mail-gonderimi</id>
+    <id>http://selcuk.miynat.com/konsoldan-mail-gonderimi</id>
     <content type="html"><![CDATA[<p>Konsoldan mail göndermek için <strong>mutt</strong>’ı kullanabiliriz.</p>
 
 <p><a href="http://mutt.blackfish.org.uk/" title="Mutt"><em>Mutt</em></a>, metin-tabanlı bir mail istemcisidir.</p>
@@ -48,9 +48,9 @@
   
   <entry>
     <title type="html"><![CDATA[RHEL 5.2 üzerinde mod_security kurulumu]]></title>
-    <link href="http://selcuk.miynat.com/blog/2011/04/21/mod-security-kurulumu/"/>
+    <link href="http://selcuk.miynat.com/mod-security-kurulumu"/>
     <updated>2011-04-21T00:00:00+03:00</updated>
-    <id>http://selcuk.miynat.com/blog/2011/04/21/mod-security-kurulumu</id>
+    <id>http://selcuk.miynat.com/mod-security-kurulumu</id>
     <content type="html"><![CDATA[<p>Öncelikle şu paketleri kurmamız gerekiyor:</p>
 
 <ul>
@@ -124,9 +124,9 @@ Include conf/extra/modsecurity.d/modsecurity_crs_10_config.conf
   
   <entry>
     <title type="html"><![CDATA[Hello World]]></title>
-    <link href="http://selcuk.miynat.com/blog/2010/12/23/deneme/"/>
+    <link href="http://selcuk.miynat.com/deneme"/>
     <updated>2010-12-23T00:00:00+02:00</updated>
-    <id>http://selcuk.miynat.com/blog/2010/12/23/deneme</id>
+    <id>http://selcuk.miynat.com/deneme</id>
     <content type="html"><![CDATA[<p>İlk yazımız bu olsun. Blog dünyasıyla tanışmış olalım.</p>
 
 <p>Haydi bakalım.</p>
