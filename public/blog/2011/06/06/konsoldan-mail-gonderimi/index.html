@@ -9,7 +9,9 @@
   <meta name="author" content="Selçuk Mıynat">
 
   
-  <meta name="description" content="Konsoldan mail göndermek için mutt’ı kullanabiliriz. Mutt, metin-tabanlı bir mail istemcisidir. yum -y install mutt ile kurulumu yapıp echo "Mail &hellip;">
+  <meta name="description" content="Konsoldan mail göndermek için mutt’ı kullanabiliriz. Mutt, metin-tabanlı bir mail istemcisidir. 1
+yum -y install mutt ile kurulumu yapıp 1
+echo "Mail &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +20,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://selcuk.miynat.com/blog/2011/06/06/konsoldan-mail-gonderimi">
+  <link rel="canonical" href="http://selcuk.miynat.com/blog/2011/06/06/konsoldan-mail-gonderimi/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
@@ -107,11 +109,15 @@
 
 <p><a href="http://mutt.blackfish.org.uk/" title="Mutt"><em>Mutt</em></a>, metin-tabanlı bir mail istemcisidir.</p>
 
-<p><code>yum -y install mutt</code></p>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>yum -y install mutt</span></code></pre></td></tr></table></div></figure>
+
 
 <p>ile kurulumu yapıp</p>
 
-<p><code>echo "Mail içeriği " | mutt -a eklenti.gz -s "Konu" -- selcukmiynat@gmail.com</code></p>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>echo "Mail içeriği " | mutt -a eklenti.gz -s "Konu" -- selcukmiynat@gmail.com</span></code></pre></td></tr></table></div></figure>
+
 
 <p>komutuyla mail gönderebiliriz.</p>
 

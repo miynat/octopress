@@ -9,7 +9,9 @@
   <meta name="author" content="Selçuk Mıynat">
 
   
-  <meta name="description" content="Konsoldan mail göndermek için mutt’ı kullanabiliriz. Mutt, metin-tabanlı bir mail istemcisidir. yum -y install mutt ile kurulumu yapıp echo "Mail &hellip;">
+  <meta name="description" content="Konsoldan mail göndermek için mutt’ı kullanabiliriz. Mutt, metin-tabanlı bir mail istemcisidir. 1
+yum -y install mutt ile kurulumu yapıp 1
+echo "Mail &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +20,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://selcuk.miynat.com">
+  <link rel="canonical" href="http://selcuk.miynat.com/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
@@ -110,11 +112,15 @@
 
 <p><a href="http://mutt.blackfish.org.uk/" title="Mutt"><em>Mutt</em></a>, metin-tabanlı bir mail istemcisidir.</p>
 
-<p><code>yum -y install mutt</code></p>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>yum -y install mutt</span></code></pre></td></tr></table></div></figure>
+
 
 <p>ile kurulumu yapıp</p>
 
-<p><code>echo "Mail içeriği " | mutt -a eklenti.gz -s "Konu" -- selcukmiynat@gmail.com</code></p>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>echo "Mail içeriği " | mutt -a eklenti.gz -s "Konu" -- selcukmiynat@gmail.com</span></code></pre></td></tr></table></div></figure>
+
 
 <p>komutuyla mail gönderebiliriz.</p>
 
@@ -171,7 +177,9 @@
 </ul>
 
 
-<p><code>sudo yum install pcre-devel apr-devel apr-util-devel</code></p>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>sudo yum install pcre-devel apr-devel apr-util-devel</span></code></pre></td></tr></table></div></figure>
+
 
 <p>Başlangıç için OWASP tarafından hazırlanan kural setlerini kullanacağız:</p>
 
@@ -181,31 +189,40 @@
 
 <p><em>/usr/local/apache2/conf/extra/modsecurity.d</em> dizini altına açarız.</p>
 
-<p><em>modsecurity_crs_10_config.conf.example</em> dosyasını
-<em>modsecurity_crs_10_config.conf</em> adıyla kaydedip</p>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>cp modsecurity_crs_10_config.conf.example modsecurity_crs_10_config.conf</span></code></pre></td></tr></table></div></figure>
 
-<p><code>SecRuleEngine On</code></p>
 
-<p>satırını ekleriz.</p>
+<p>Bu dosyaya <code>SecRuleEngine On</code> satırını ekleriz.</p>
 
 <p>Şimdi, Apache&#8217;yi durduralım:</p>
 
-<p><em>/usr/local/apache2/bin/httpd -k stop</em></p>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>/usr/local/apache2/bin/httpd -k stop</span></code></pre></td></tr></table></div></figure>
+
 
 <p>Apache üzerinde <em>mod_unique_id</em> modülü kurulu olmalı.
 Bu modülü kurmak için <a href="http://httpd.apache.org/docs/current/programs/apxs.html" title="apxs">apxs</a>&#8216;i kullanabiliriz:</p>
 
-<p><code>sudo /usr/local/apache2/bin/apxs -i -a -c /usr/local/src/httpd-2.2.17/modules/metadata/mod_unique_id.c</code></p>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>sudo /usr/local/apache2/bin/apxs -i -a -c /usr/local/src/httpd-2.2.17/modules/metadata/mod_unique_id.c</span></code></pre></td></tr></table></div></figure>
+
 
 <p>Artık mod_security&#8217;yi derleyebiliriz:</p>
 
-<pre><code>tar zxvf modsecurity-apache_2.5.13.tar.gz
-cd modsecurity-apache_2.5.13  
-cd apache2  
-./configure  
-make  
-sudo make install  
-</code></pre>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>tar zxvf modsecurity-apache_2.5.13.tar.gz
+</span><span class='line'>cd modsecurity-apache_2.5.13  
+</span><span class='line'>cd apache2  
+</span><span class='line'>./configure  
+</span><span class='line'>make  
+</span><span class='line'>sudo make install  </span></code></pre></td></tr></table></div></figure>
+
 
 <p><em>/usr/local/apache2/conf/httpd.conf</em> içerisine şu satırları ekleriz:</p>
 
@@ -216,7 +233,9 @@ Include conf/extra/modsecurity.d/modsecurity_crs_10_config.conf
 
 <p>Kurulumu tamamlamış olduk, Apache&#8217;yi tekrar çalıştırabiliriz:</p>
 
-<p><em>/usr/local/apache2/bin/httpd -k start</em></p>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>/usr/local/apache2/bin/httpd -k start</span></code></pre></td></tr></table></div></figure>
+
 </div>
   
   
