@@ -4,7 +4,7 @@
   <title><![CDATA[Fung-Hu]]></title>
   <link href="http://selcuk.miynat.com/atom.xml" rel="self"/>
   <link href="http://selcuk.miynat.com/"/>
-  <updated>2012-10-13T22:35:26+03:00</updated>
+  <updated>2012-12-24T20:20:03+02:00</updated>
   <id>http://selcuk.miynat.com/</id>
   <author>
     <name><![CDATA[Selçuk Mıynat]]></name>
@@ -12,6 +12,57 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[String Comparison]]></title>
+    <link href="http://selcuk.miynat.com/string-comparison"/>
+    <updated>2012-12-24T00:00:00+02:00</updated>
+    <id>http://selcuk.miynat.com/string-comparison</id>
+    <content type="html"><![CDATA[<p>Konu Sercan (<a href="https://twitter.com/skatersercan/">@skatersercan</a>)&#8217;ın şu sorusuyla açıldı:</p>
+
+<blockquote><p>var result = &#8220;23&#8221; < "3"; sizce result ne döner ve sebebi nedir? Araştırmadan cevap verin lütfen :)</p><footer><strong>@skatersercan</strong> <cite><a href='https://twitter.com/skatersercan/status/283131078015873025'>twitter.com/skatersercan/status/&hellip;</a></cite></footer></blockquote>
+
+
+<p>Bilinçli bir vatandaş olarak görevden kaçamazdım, cevap vermeye çalıştım.</p>
+
+<p>Bu karşılaştırma işlemi kısaca şöyle oluyor:</p>
+
+<p>İki string&#8217;i karşılaştırmak istediğimizde derleyici/yorumlayıcı bu string&#8217;leri alıp, karakter karakter karşılaştırıyor. İki karakter eşit ise bir sonraki karakterleri alıp, onları karşılaştırıyor ve bu eşitlik bozulana kadar bu karşılaştırma işlemi devam ediyor.</p>
+
+<p>Peki iki karakteri nasıl karşılaştırıyoruz, yani bir karakter nasıl oluyor da diğerinden büyük oluyor?</p>
+
+<p>Bu karşılaştırma işlemi karakterlerin <a href="http://www.asciitable.com/">ASCII tablosu</a>ndaki karşılıklarına göre yapılıyor, tablodaki değeri büyük olan karakter daha büyük sayılıyor.</p>
+
+<p>Sercan&#8217;ın sorusundaki karşılaştırmaya bakacak olursak:</p>
+
+<p>&#8220;23&#8221; &lt; &#8220;3&#8221; :</p>
+
+<p>Önce eşitliğin sol tarafındaki &#8220;23&#8221;ün ilk karakteri olan &#8220;2&#8221; ile sol taraftaki &#8220;3&#8221; karşılaştırılıyor. &#8220;2&#8221;nin ASCII tablodaki karşılığı 50(dec), &#8220;3&#8221;ün karşılığı ise 51(dec). Eşitlik ilk karakterde bozuldu ve karşılaştırmanın sağ tarafı daha büyük çıktı. Karşılaştırma işlemi burada sonlanır ve sonuç TRUE döner.</p>
+
+<p>Başka bir örnek daha inceleyelim, mesela Japonya ile Jamaika&#8217;yı karşılaştıralım:</p>
+
+<p>&#8220;Japonya&#8221; > &#8220;Jamaika&#8221; şeklinde olsun karşılaştırmamız.</p>
+
+<p>Burada eşitliğin bozulduğu ilk yer &#8220;p&#8221; ile &#8220;m&#8221;nin karşılaştırıldığı yer. ASCII tablosunda &#8220;p&#8221; 112(dec), &#8220;m&#8221; ise 109(dec)&#8217;a karşılık geliyor. Dolayısıyla &#8220;Japonya&#8221; daha büyük oluyor ve bu karşılaştırma için de sonuç TRUE dönüyor.</p>
+
+<p>Son bir örnek olarak, &#8220;23&#8221; ile &#8220;elma&#8221; karşılaştırmasını yapalım:</p>
+
+<p>&#8220;23&#8221; &lt; &#8220;elma&#8221; :</p>
+
+<p>&#8220;2&#8221;nin değeri 50(dec), &#8220;e&#8221;nin değeri ise 101(dec)&#8217;dir. Dolayısıyla karşılaştırmanın sağ tarafı büyüktür ve sonuç TRUE olur.</p>
+
+<p>Dikkat edilmesi gereken bir nokta da, harflerin küçük halleriyle büyük hallerinin farklı değerlere sahip oluşudur. Mesela &#8220;c&#8221; 99(dec) değerine karşılık gelirken &#8220;C&#8221; 67(dec) değerine karşılık gelmektedir.</p>
+
+<p>Umarım yeterince anlaşılır olmuştur.</p>
+
+<p>Herkese kolay gelsin.</p>
+
+<ul>
+<li><em>dec : decimal(onluk sayı sistemi)</em></li>
+</ul>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Konsoldan mail gönderimi]]></title>
