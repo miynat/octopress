@@ -10,7 +10,7 @@ sharing: false
 [![Linkedin](/images/linkedin-24x24.png)](http://tr.linkedin.com/in/selcukmiynat/)
 [![Google Plus](/images/google+-24x24.png)](https://plus.google.com/103044866822904094845)
 [![Stackoverflow](/images/stackoverflow-24x24.png)](http://stackoverflow.com/users/1167080/selcuk-miynat)
-[![Atom](/images/feed-24x24.png)](http://feeds.feedburner.com/Fung-Hu)
+[![Atom](/images/feed-24x24.png)](http://selcuk.miynat.com/atom.xml)
 
 ##### Site hakkında:
 
